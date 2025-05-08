@@ -52,7 +52,7 @@
 
 import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../lib/firebaseConfig';
+import { auth } from '../../../lib/firebaseConfig';
 import { useRouter } from 'next/navigation';
 
 export default function Login() {
@@ -66,7 +66,7 @@ export default function Login() {
       sessionStorage.setItem('user', email);
       router.push('/');
     } catch (error) {
-      alert('Login failed: ' + error.message);
+      alert('Login failed: ' + (error as Error).message);
     }
   };
 

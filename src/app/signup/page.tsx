@@ -51,7 +51,7 @@
 
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../lib/firebaseConfig';
+import { auth } from '../../../lib/firebaseConfig';
 import { useRouter } from 'next/navigation';
 
 export default function Signup() {
@@ -65,7 +65,7 @@ export default function Signup() {
       sessionStorage.setItem('user', email);
       router.push('/');
     } catch (error) {
-      alert('Signup failed: ' + error.message);
+      alert('Signup failed: ' + (error as Error).message);
     }
   };
 
