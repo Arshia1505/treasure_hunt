@@ -14,16 +14,6 @@ export default function Level3() {
     }
   }, [router]);
 
-  // const handleSubmit = () => {
-  //   if (answer.trim().toLowerCase() === 'map') {
-  //     sessionStorage.setItem('level3-complete', 'true');
-  //     router.push('/success');
-  //   } else {
-  //     alert('Keep thinking...');
-  //   }
-  // };
-
-  
       const handleSubmit = () => {
         if (answer.trim().toLowerCase() === 'map') {
           sessionStorage.setItem('level3-complete', 'true');

@@ -14,16 +14,7 @@ export default function Level2() {
     }
   }, [router]);
 
-  // const handleSubmit = () => {
-  //   if (answer.trim().toLowerCase() === 'echo') {
-  //     sessionStorage.setItem('level2-complete', 'true');
-  //     router.push('/level3');
-  //   } else {
-  //     alert('Nope! Try again.');
-  //   }
-  // };
-
-    const handleSubmit = () => {
+     const handleSubmit = () => {
       if (answer.trim().toLowerCase() === 'echo') {
         sessionStorage.setItem('level2-complete', 'true');
         router.push('/level3');
